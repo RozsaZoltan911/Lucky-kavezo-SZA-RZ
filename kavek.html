@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süteményeink</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobil.css">
+    <script src="js/main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+            </ul>
+        </nav>
+        <p class="menu-toggle" onclick="openMenu()" id="menu-toggle">
+            <ion-icon name="menu-outline" onclick="openMenu()"></ion-icon>
+        </p>
+        <nav class="mobile-menu"  id="mobile-menu" onclick="closeMenu()">
+            <ul onclick="closeMenu()">
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="ajanlatok">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
+                <h1>
+                    Kávéink
+                </h1>
+                </div>
+                <div class="col-lg-6">
+                    <figure data-aos="fade-up" data-aos-duration="3000">
+                        <div class="slick-slideshow" >
+                            
+                            <div><img src="img/espresso.jpg" alt="espresso" title="espresso"></div>
+                            <div><img src="img/irish-coffee.jpg" alt="Irish coffee" title="Irish coffee"></div>
+                            <div><img src="img/mocha.jpg" alt="Mokka" title="Mokka"></div>
+                        </div>
+                        <figcaption>
+                            <p>
+                                Napi Ajánlatunk
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </section>
+        <section class="termekek" id="Termek">
+            <div class="row filter" data-aos="fade-up" data-aos-duration="3000">
+                <div class="col-lg-5">
+                    <h2>Keresés:</h2>
+                    <input type="text" id="searchInput" placeholder="Keresés..." onkeyup="search_list()" >
+
+                    </div>
+                <div class="col-lg-7">
+                    <p>Gluténmentes:</p>
+                    <input type="checkbox">
+                    <p>Laktózmentes:</p>
+                    <input type="checkbox">
+                    <p>Diabetikus:</p>
+                    <input type="checkbox">
+
+                </div>
+            </div>
+            <div class="searchableContainer">
+                <ul id="list">
+                    <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/Iced_Americano.jpg" alt="Jeges Americano" title="Jeges Americano">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Jeges americano
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/espresso.jpg" alt="espresso" title="espresso">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Espresso
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/doppio.jpg" alt="Doppio" title="Doppio">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Doppio
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/ristretto.jpg" alt="Ristretto" title="Ristretto">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Ristretto
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/lungo.webp" alt="Lungo" title="Lungo">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Lungo
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/americano.webp" alt="Americano" title="Americano">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Americano
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/cappuchino.png" alt="Cappuccino" title="Cappuccino">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Cappuccino
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/latte machiatto.avif" alt="latte machiatto" title="Latte Machiatto">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Latte macchiato
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/flatwhite.jpg" alt="Flat White" title="Flat white">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Flat white
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/cafe-latte.jpg" alt="Café latte" title="Café latte">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Café latte
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/cortado.jpg" alt="Cortado" title="Cortado">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Cortado
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek" >
+                        <figure>
+                        <img src="img/mocha.jpg" alt="Mokka" title="Mokka">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Mocha
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek" >
+                        <figure>
+                        <img src="img/irish-coffee.jpg" alt="Irish coffee" title="Irish coffee">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Irish coffee
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    <li class="keresheto-termek" >
+                        <figure>
+                        <img src="img/jeges-latte.jpg" alt="Jeges latte" title="Jeges latte">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Jeges latte
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    <li class="keresheto-termek" >
+                        <figure>
+                        <img src="img/affogato.jpg" alt="Affogato" title="Affogato">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Affogato
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            Lucky Kávézó - &copy; Minden Jog Fenntartva - 2025!
+        </p>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick-init.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <script>
+  AOS.init();
+</script>
+    
+</body>
+</html>
