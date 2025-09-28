@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky Kávézó</title>
+    <title>Süteményeink</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobil.css">
+    <script src="js/main.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <header>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+            </ul>
+        </nav>
+                <p class="menu-toggle" onclick="openMenu()" id="menu-toggle">
+            <ion-icon name="menu-outline" onclick="openMenu()"></ion-icon>
+        </p>
+        <nav class="mobile-menu"  id="mobile-menu" onclick="closeMenu()">
+            <ul onclick="closeMenu()">
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-cim">
+            <h1>
+                Rendelés
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="">
+                    <h2 data-aos="fade-up">
+                        Név
+                    </h2>
+                    <input type="text" placeholder="Gipsz Jakab" data-aos="fade-up">
+                    <h2 data-aos="fade-up">
+                        Város
+                    </h2>
+                    <input type="text" placeholder="1007 Budapest" data-aos="fade-up">
+                    <h2 data-aos="fade-up">
+                        Lakcim
+                    </h2>
+                    <input type="text" placeholder="Muskátli utca 1" data-aos="fade-up">
+                    <h2 data-aos="fade-up">
+                        Megjegyzés a Futárnak:
+                    </h2>
+                    <textarea name="" id="" cols="40" rows="3"data-aos="fade-up">
     
+                    </textarea>
+                </form>
+    
+                    
+                </div>
+                <div class="col-lg-2 submit" data-aos="fade-up">
+                    <input type="submit">
+            </div>
+            <div class="col-lg-5 map-container" data-aos="fade-up">
+                <iframe width="400" height="400" src="https://www.openstreetmap.org/export/embed.html?bbox=19.07121151685715%2C47.49227061931498%2C19.074752032756805%2C47.49382196021467&amp;layer=mapnik" class="map"></iframe> 
+
+            </div>
+       </div>
+    </main>
+    <footer>
+        <p>
+            Lucky Kávézó - &copy; Minden Jog Fenntartva - 2025!
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slic/slick.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+  AOS.init();
+</script>
 </body>
 </html>

@@ -5,39 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Süteményeink</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobil.css">
+    <script src="js/main.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header>
         <nav class="desktop-nav">
             <ul>
-                <li><a href="">Rendelés</a></li>
-                <li><a href="">Sütemények</a></li>
-                <li><a href=""><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
-                <li><a href="">Kávék</a></li>
-                <li><a href="">Rólunk</a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
+            </ul>
+        </nav>
+                <p class="menu-toggle" onclick="openMenu()" id="menu-toggle">
+            <ion-icon name="menu-outline" onclick="openMenu()"></ion-icon>
+        </p>
+        <nav class="mobile-menu"  id="mobile-menu" onclick="closeMenu()">
+            <ul onclick="closeMenu()">
+                <li><a href="index.html"><img src="img/coffee-logo.png" alt="Kávé logo" title="Lucky Kávéház"></a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+                <li><a href="sutemenyek.html">Sütemények</a></li>
+                <li><a href="kavek.html">Kávék</a></li>
+                <li><a href="rolunk.html">Rólunk</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="sutemenyek-main">
         <section class="ajanlatok">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-duration="3000">
                 <h1>
                     Süteményeink
                 </h1>
                 </div>
-                <div class="col-lg-6">
-                    <img src="img/cake-1.webp" class="slider" alt="">
+                <div class="col-lg-6" data-aos="fade-up"data-aos-duration="3000">
+                    <figure>
+                        <div class="slick-slideshow" >
+                            
+                            <div><img src="img/brownie.jpg" alt="brownie" title="Brownie"></div>
+                            <div><img src="img/tiramisu.jpg" alt="tiramisu" title="Tiramisu"></div>
+                            <div><img src="img/macaron.jpg" alt="macaron" title="Macaron"></div>
+                        </div>
+                        <figcaption>
+                            <p>
+                                Napi Ajánlatunk
+                            </p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
 
         </section>
+        <section class="termekek" id="Termek">
+            <div class="row filter" data-aos="fade-up"data-aos-duration="3000">
+                <div class="col-lg-5">
+                    <h2>Keresés:</h2>
+                    <input type="text" id="searchInput" placeholder="Keresés..." onkeyup="search_list()" >
 
+                    </div>
+                <div class="col-lg-7">
+                    <p>Gluténmentes:</p>
+                    <input type="checkbox">
+                    <p>Laktózmentes:</p>
+                    <input type="checkbox">
+                    <p>Diabetikus:</p>
+                    <input type="checkbox">
+
+                </div>
+            </div>
+            <div class="searchableContainer">
+                <ul id="list">
+                    <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/sajt-torta.webp" alt="Sajt torta" title="Sajt torta">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Sajttorta
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/brownie.jpg" alt="brownie" title="Brownie">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Brownie
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/muffin.jpg" alt="muffin" title="Muffin">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Muffin
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/croissant.jpg" alt="croissant" title="Croissant">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Croissant
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/repa-torta.jpg" alt="Répatorta" title="Répatorta">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Répatorta
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/macaron.jpg" alt="macaron" title="Macaron">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Macaron
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/tiramisu.jpg" alt="tiramisu" title="Tiramisu">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Tiramisu
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/almas-pite.jpg" alt="Almás pite" title="Almás pite">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Almás pite
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/citrom-torta.jpg" alt="Citromtorta" title="Citromtorta">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Citromtorta
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/panna-cotta.webp" alt="Panna cotta" title="Panna cotta">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Panna cotta
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/zserbo-szelet.webp" alt="zserbo-szelet" title="Zserbó szelet">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Zserbó szelet
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/eszterhazy.jpg" alt="Eszterházy torta" title="Eszterházy torta">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Eszterházy torta
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                    </li>
+                        <li class="keresheto-termek">
+                        <figure>
+                        <img src="img/Linzer.jpg" alt="Linzer" title="Linzer">
+                        <figcaption>
+                            <h3 class="keresheto-termek-value">
+                                Linzer
+                            </h3>
+                        </figcaption>
+                    </figure>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
 
     </main>
     <footer>
-
+        <p>
+            Lucky Kávézó - &copy; Minden Jog Fenntartva - 2025!
+        </p>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick-init.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <script>
+  AOS.init();
+</script>
+
 </body>
 </html>
